@@ -13,7 +13,9 @@ webhookHandler.on('push', function (repo, data) {
     event.payload.repository.name,
     event.payload.ref)
 });
-
+webhookHandler.on('error', function (err) {
+  console.error('Error:', err.message)
+})
 app.get("/", (req, res) =>
 {
    res.status(200).send("Hello");
