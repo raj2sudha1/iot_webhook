@@ -1,8 +1,8 @@
 "use strict"
 
 const express = require('express');
-const webhookHandler = require('github-webhook-handler');
-var webhookHandler = webhookHandler({ path: '/webhook', secret: 'secret' });
+const GetwebhookHandler = require('github-webhook-handler');
+var webhookHandler = GetwebhookHandler({ path: '/webhook', secret: 'secret' });
 
 let app = express();
 //app.use(bodyParser.json()); // must use bodyParser in express
