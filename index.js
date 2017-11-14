@@ -21,6 +21,7 @@ app.get("/", (req, res) =>
    res.status(200).send("Hello");
 });
 
+app.on("listening", function () { app.close(); });
 app.listen(3000, () => {
    console.log("I'm listening.")
 });
